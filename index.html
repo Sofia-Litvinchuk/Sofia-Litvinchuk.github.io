@@ -374,17 +374,6 @@ void main(void) {
 
 <body>
     <canvas id="swarm"></canvas>
-  <script type="text/javascript">
-    var vid = document.getElementById("music.mp3");
-
-    function playVid() {
-      vid.play();
-    }
-
-    function pauseVid() {
-     vid.pause();
-    }
-  </script>
   <div class="main center">
     <div style="font-size: 40px;" class="logo-blur logo-bass">
         <span class="logo-neon">sof_iaa4
@@ -398,6 +387,13 @@ void main(void) {
         <br> <br> <pre>Софья Литвинчук🍷 <br> <a>13 years old</a></pre>
         <br> <br> <pre onclick="soundClick()">Play - Егор Шип Dior </pre>
     </div>
+    <script type="text/javascript">
+    function soundClick() {
+      var audio = new Audio(); // Создаём новый элемент Audio
+      audio.src = 'https://sofia-litvinchuk.github.io/music.mp3'; // Указываем путь к звуку "клика"
+      audio.autoplay = true; // Автоматически запускаем
+    }
+  </script>
 </div>
 </body>
 </html>
